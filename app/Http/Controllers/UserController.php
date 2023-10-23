@@ -54,7 +54,19 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        $this->validate($request, [
+            'name' => [
+                'required', 'min:3', 'max:128',
+            ],
+        ]);
+
+        $user->update([
+            'name' => $request->name,
+        ]);
+
+        session()->flash('message', 'User info updated');
+
+        return redirect()->route('users.show', $user);
     }
 
     /**
