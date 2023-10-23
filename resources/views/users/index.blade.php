@@ -10,7 +10,14 @@
             {{ $users->links() }}
             <ol>
                 @foreach ($users as $user)
-                    <li>{{ $user->name }}</li>
+                    <li>
+                        {{-- npm run dev --}}
+                        <a
+                        class="hover:underline hover:text-red-700"
+                        href="{{ route('users.show', $user) }}">
+                        {{ $user->name }}
+                        </a>
+                    </li>
                 @endforeach
             </ol>
             {{ $users->links() }}
