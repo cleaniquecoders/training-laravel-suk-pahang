@@ -20,7 +20,7 @@ class UserPolicy
      */
     public function view(User $user, User $model): bool
     {
-        //
+        return $user->can('view-user');
     }
 
     /**
@@ -28,7 +28,7 @@ class UserPolicy
      */
     public function create(User $user): bool
     {
-        //
+        return $user->can('create-user');
     }
 
     /**
@@ -36,7 +36,7 @@ class UserPolicy
      */
     public function update(User $user, User $model): bool
     {
-        //
+        return $user->can('update-user');
     }
 
     /**
