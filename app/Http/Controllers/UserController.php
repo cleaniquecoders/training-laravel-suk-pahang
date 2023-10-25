@@ -81,6 +81,12 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        $message = 'User '.$user->name.' has been deleted.';
+
+        $user->delete();
+
+        session()->flash('message', $message);
+
+        return redirect()->route('users.index');
     }
 }
