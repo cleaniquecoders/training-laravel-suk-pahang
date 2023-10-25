@@ -13,6 +13,8 @@
 -   [x] Artisan
 -   [x] Package
     -   [x] Spatie - Laravel Permission
+    -   [x] Laravel Pint - Laravel Pint is an opinionated PHP code style fixer for minimalists.
+    -   [x] Larastan - Adds code analysis to Laravel improving developer productivity and code quality.
 
 ### Controller
 
